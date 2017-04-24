@@ -1,0 +1,30 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+button, input {
+    outline: none;
+}
+
+nav {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+    line-height: 75px;
+    background: #f1f1f1;
+}
+
+li {
+    list-style: none;
+    float: left;
+    padding-right: 25px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wood {
+    margin-right: 50px;
+}

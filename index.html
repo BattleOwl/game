@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/screen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="./js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hra</title>
+</head>
+<body>
+    <div ng-app="Game" ng-controller="miningCtrl"  class="container">
+
+        <header>
+            <nav>
+                <ul>
+                    <li>natěženo dřeva: <span> {{ wood }} </span></li>
+                    <li>natěženo kamení: <span> {{ stone }} </span></li>
+                    <li>natěženo zlata: <span> {{ gold }} </span></li>
+                    <li>
+                        <a href="#chat">Chat</a>
+                    </li>
+                    <li>
+                        <a href="#story">Příběh</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+        <div ng-view>
+
+        </div>
+        <div ng-model="wood">
+
+            <span>
+                <p> <button ng-click="countWood = countWood + 0.5" ng-model="addMe" class="wood">Sekni</button> {{ countWood }}  </p>
+            </span>
+
+        </div>
+
+        <div ng-model="stone">
+
+            <span>
+                <p> <button ng-click="countStone = countStone + 0.25" ng-model="addMe" class="wood">Rubni</button> {{ countStone }}  </p>
+            </span>
+
+        </div>
+
+        <div ng-model="gold">
+
+            <span>
+                <p> <button ng-click="countGold = countGold + 0.02" ng-model="addMe" class="wood">Doluj</button> {{ countGold }}  </p>
+            </span>
+
+        </div>
+
+
+        <button ng-click="addItem()">Poslat na hromadu</button>
+
+    </div>
+</body>
+</html>
