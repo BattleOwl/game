@@ -5,7 +5,9 @@ body, ul, li {
 button, input {
     outline: none;
 }
-
+.left {
+    float: left;
+}
 nav {
     display: inline-block;
     width: 100%;

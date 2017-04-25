@@ -32,33 +32,33 @@
         <div ng-view>
 
         </div>
-        <div ng-model="wood">
+        <div class="mining">
+            <div ng-model="wood">
 
-            <span>
-                <p> <button ng-click="countWood = countWood + 0.5" ng-model="addMe" class="wood">Sekni</button> {{ countWood }}  </p>
-            </span>
+                <span>
+                    <p> <button ng-click="countWood = countWood + 0.5" ng-model="addMe" class="wood">Sekni</button> {{ countWood }}  </p>
+                </span>
 
+            </div>
+
+            <div ng-model="stone">
+
+                <span>
+                    <p> <button ng-click="countStone = countStone + 0.25" ng-model="addMe" class="wood">Rubni</button> {{ countStone }}  </p>
+                </span>
+
+            </div>
+
+            <div ng-model="gold">
+
+                <span>
+                    <p> <button ng-click="countGold = countGold + 0.02" ng-model="addMe" class="wood">Doluj</button> {{ countGold }}  </p>
+                </span>
+
+            </div>
+
+            <button ng-click="addItem()">Poslat na hromadu</button>
         </div>
-
-        <div ng-model="stone">
-
-            <span>
-                <p> <button ng-click="countStone = countStone + 0.25" ng-model="addMe" class="wood">Rubni</button> {{ countStone }}  </p>
-            </span>
-
-        </div>
-
-        <div ng-model="gold">
-
-            <span>
-                <p> <button ng-click="countGold = countGold + 0.02" ng-model="addMe" class="wood">Doluj</button> {{ countGold }}  </p>
-            </span>
-
-        </div>
-
-
-        <button ng-click="addItem()">Poslat na hromadu</button>
-
     </div>
 </body>
 </html>
